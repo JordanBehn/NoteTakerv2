@@ -11,8 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set up routes 
-//require("./routes.js")(app);
-//require("./routes/apiRoutes")(app);
+require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // Listener
