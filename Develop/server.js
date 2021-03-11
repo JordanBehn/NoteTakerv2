@@ -10,9 +10,11 @@ var PORT = 3500;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Require Routes.js 
+// Set up routes 
 //require("./routes.js")(app);
- 
+//require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 // Listener
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
