@@ -4,7 +4,7 @@ var path = require("path");
 
 // Sets up the Express App
 var app = express();
-var PORT = 3500;
+var PORT = 5000;
 
 // Sets up Express to handle data
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +15,6 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // Listener
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 5000, function() {
     console.log("App listening on PORT: " + PORT);
 });
