@@ -1,17 +1,19 @@
-// dependencies
+// Dependencies
 var express = require("express");
-// express configuration
-var app = express();
-var PORT = process.env.PORT || 8080;
+var path = require("path");
 
-// Sets up the Express app to handle data parsing
+// Sets up the Express App
+var app = express();
+var PORT = 3500;
+
+// Sets up Express to handle data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Router
-require("./routes")(app);
-
-// listener
+// Require Routes.js 
+//require("./routes.js")(app);
+ 
+// Listener
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
 });
