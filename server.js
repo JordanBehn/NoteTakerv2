@@ -9,7 +9,7 @@ var PORT = 5000;
 // Sets up Express to handle data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(express.static('public'))
 // Set up routes 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
